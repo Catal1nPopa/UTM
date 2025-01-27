@@ -1,0 +1,47 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="keTNEGnftJXRs440OWy9">
+    <mxGraphModel dx="1225" dy="738" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iCHob3DXkhUxvK6vz61q-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="iCHob3DXkhUxvK6vz61q-1" target="iCHob3DXkhUxvK6vz61q-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCHob3DXkhUxvK6vz61q-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iCHob3DXkhUxvK6vz61q-1" target="iCHob3DXkhUxvK6vz61q-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="429" y="191" />
+              <mxPoint x="318" y="191" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iCHob3DXkhUxvK6vz61q-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iCHob3DXkhUxvK6vz61q-1" target="iCHob3DXkhUxvK6vz61q-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="191" />
+              <mxPoint x="558" y="191" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iCHob3DXkhUxvK6vz61q-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="iCHob3DXkhUxvK6vz61q-1" target="iCHob3DXkhUxvK6vz61q-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iCHob3DXkhUxvK6vz61q-1" value="Sistem pentru gestionarea fișierelor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="378" y="57" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iCHob3DXkhUxvK6vz61q-2" value="Analiza cerințelor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="57" y="236" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iCHob3DXkhUxvK6vz61q-3" value="Proiectarea sistemului" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="258" y="236" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iCHob3DXkhUxvK6vz61q-4" value="Dezvoltarea sistemului" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="498" y="236" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iCHob3DXkhUxvK6vz61q-5" value="Testarea și validarea sistemului" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="689" y="236" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
