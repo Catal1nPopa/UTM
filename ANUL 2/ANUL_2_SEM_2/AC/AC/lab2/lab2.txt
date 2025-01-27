@@ -1,0 +1,197 @@
+include Irvine32.inc
+
+.data
+a DWORD 0          ; set value of 'a' here
+b DWORD 0          ; set value of 'b' here
+result DWORD ?      ; variable to store the result
+
+.code
+main PROC
+    ; Compute the expression
+    mov eax, a       ; move 'a' into eax register
+    imul eax, 5      ; multiply eax by 5
+    mov ebx, b       ; move 'b' into ebx register
+    mov edx, 7       ; set the divisor to 7
+    cdq              ; sign-extend edx into edx:eax
+    idiv edx         ; divide edx:eax by edx
+    sub eax, ebx     ; subtract the result of division from 'b'
+    mov ecx, eax     ; move the result to ecx register
+    mov eax, b       ; move 'b' into eax register
+    mov edx, 3       ; set the divisor to 3
+    cdq              ; sign-extend edx into edx:eax
+    idiv edx         ; divide edx:eax by edx
+    mov edx, a       ; move 'a' into edx register
+    imul edx, a      ; multiply edx by itself
+    add eax, edx     ; add the result of multiplication to 'b'
+    mov ebx, ecx     ; move the value of 'b' from earlier to ebx register
+    cdq              ; sign-extend ebx into edx:eax
+    idiv ebx         ; divide edx:eax by the value of 'b' from earlier
+    mov result, eax  ; move the result to the 'result' variable
+
+    ; Display the result
+    mov eax, result  ; move the 'result' variable into eax register
+    call WriteInt    ; display the integer value of eax
+    call Crlf        ; display a new line
+    exit             ; exit the program
+main ENDP
+END main
+
+
+
+///////////////////////////////////////////
+
+INCLUDE Irvine32.inc
+
+.DATA
+a DWORD 4          ; value of a
+b DWORD 2          ; value of b
+z DWORD ?         ; value of z
+
+.CODE
+main PROC
+    ; calculate z=(5*a-b/7)/(3/b+a*a)
+
+    mov eax, a      ; eax = a
+    imul eax, 5     ; eax = 5*a
+
+    mov ebx, b      ; ebx = b
+    cdq             ; sign-extend b to edx:eax
+    idiv dword ptr [7]   ; divide edx:eax by 7 (store result in eax)
+
+    sub eax, ebx    ; eax = 5*a - b/7
+
+    mov ecx, 3      ; ecx = 3
+    cdq             ; sign-extend a to edx:eax
+    idiv eax, dword ptr [a] ; divide edx:eax by a (store result in eax)
+
+    add eax, dword ptr [a]  ; eax = 3/a + a
+
+    mov ebx, a
+    imul ebx, ebx   ; ebx = a*a
+
+    cdq             ; sign-extend b to edx:eax
+    idiv dword ptr [b]   ; divide edx:eax by b (store result in eax)
+
+    add eax, ebx    ; eax = 3/b + a*a
+
+    cdq             ; sign-extend z to edx:eax
+    idiv eax, dword ptr [eax] ; divide edx:eax by eax (store result in eax)
+
+    mov z, eax      ; store result in z
+
+    ; display result
+    mov edx, OFFSET z
+    call WriteInt
+
+    exit
+main ENDP
+END main
+
+
+/////////////////////////////
+corect///
+///////
+INCLUDE Irvine32.inc
+
+.DATA
+a DWORD 14         ; value of a
+b DWORD -20         ; value of b
+z DWORD ?         ; value of z
+tmp DWORD ?       ; temporary variable to store result
+
+.CODE
+main PROC
+    ; calculate z=(5*a-b/7)/(3/b+a*a)
+
+    mov eax, a      ; eax = a
+    imul eax, 5     ; eax = 5*a
+
+    mov ebx, b      ; ebx = b
+    cdq             ; sign-extend b to edx:eax
+    mov ecx, 7      ; ecx = 7
+    idiv ecx        ; divide edx:eax by 7 (store result in eax)
+
+    sub eax, ebx    ; eax = 5*a - b/7
+
+    mov ecx, 3      ; ecx = 3
+    cdq             ; sign-extend a to edx:eax
+    idiv dword ptr [a] ; divide edx:eax by a (store result in eax)
+
+    add eax, a      ; eax = 3/a + a
+
+    mov ebx, a
+    imul ebx, ebx   ; ebx = a*a
+
+    cdq             ; sign-extend b to edx:eax
+    idiv dword ptr [b]   ; divide edx:eax by b (store result in eax)
+
+    add eax, ecx    ; eax = 3/b + a*a
+
+    mov tmp, eax    ; store result in tmp
+
+    cdq             ; sign-extend tmp to edx:eax
+    idiv dword ptr [tmp] ; divide edx:eax by tmp (store result in eax)
+
+    mov z, eax      ; store result in z
+
+    ; display result
+    mov edx, OFFSET z
+    call WriteInt
+
+    exit
+main ENDP
+END main
+
+
+/////
+INCLUDE Irvine32.inc ; include biblioteca Irvine32
+
+.DATA
+a DWORD 14 ; valoarea lui a
+b DWORD -20 ; valoarea lui b
+z DWORD ? ; valoarea lui z
+tmp DWORD ? ; variabila temporara pentru a stoca rezultatul intermediar
+
+.CODE
+main PROC
+    ; calculeaza z=(5*a-b/7)/(3/b+a*a)
+
+    mov eax, a ; incarca valoarea lui a in registrul eax
+    imul eax, 5 ; inmulteste a cu 5 si stocheaza rezultatul in eax
+
+    mov ebx, b ; incarca valoarea lui b in registrul ebx
+    cdq ; semn-extinde valoarea lui b la edx:eax
+    mov ecx, 7 ; incarca 7 in registrul ecx
+    idiv ecx ; imparte edx:eax la 7 si stocheaza rezultatul in eax
+
+    sub eax, ebx ; scade b/7 din 5*a si stocheaza rezultatul in eax
+
+    mov ecx, 3 ; incarca 3 in registrul ecx
+    cdq ; semn-extinde valoarea lui a la edx:eax
+    idiv dword ptr [a] ; imparte edx:eax la a si stocheaza rezultatul in eax
+
+    add eax, a ; aduna a la 3/a si stocheaza rezultatul in eax
+
+    mov ebx, a ; incarca valoarea lui a in registrul ebx
+    imul ebx, ebx ; inmulteste a cu a si stocheaza rezultatul in ebx
+
+    cdq ; semn-extinde valoarea lui b la edx:eax
+    idiv dword ptr [b] ; imparte edx:eax la b si stocheaza rezultatul in eax
+
+    add eax, ecx ; aduna 3/b la a*a si stocheaza rezultatul in eax
+
+    mov tmp, eax ; stocheaza rezultatul intermediar in tmp
+
+    cdq ; semn-extinde valoarea lui tmp la edx:eax
+    idiv dword ptr [tmp] ; imparte edx:eax la tmp si stocheaza rezultatul in eax
+
+    mov z, eax ; stocheaza rezultatul final in z
+
+    ; afiseaza rezultatul
+    mov edx, OFFSET z ; incarca adresa variabilei z in registrul edx
+    call WriteInt ; afiseaza valoarea din z
+
+    exit ; iese din program
+main ENDP
+END main
+///

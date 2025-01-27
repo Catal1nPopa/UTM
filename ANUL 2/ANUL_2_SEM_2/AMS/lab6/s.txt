@@ -1,0 +1,35 @@
+În starea de repaus, sistemul este inactiv și așteaptă să primească comenzi de la utilizator. Când butonul de pornire este apăsat, sistemul trece în starea de inițializare, în care se pregătește pentru a primi comenzi. După ce inițializarea este finalizată, sistemul trece în starea de așteptare a comenzilor, în care este pregătit să primească comenzi de la utilizator și să le execute.
+----------------------------
+În starea de funcționare, sistemul este activ și pregătit să primească comenzi de la utilizator. Când o comandă este primită, sistemul trece în starea de procesare a comenzii, în care verifică dacă comanda este validă și poate fi executată. Dacă comanda este validă, sistemul trece în starea de execuție a comenzii, în care începe să execute comanda. După ce comanda este finalizată, sistemul trece în starea de finalizare a comenzii, în care raportează utilizatorului că operațiunea a fost finalizată cu succes.
+
+Dacă sistemul primește o comandă nerecunoscută, atunci sistemul revine în starea de așteptare a comenzilor, pregătit să primească o nouă comandă de la utilizator.
+--------------------------------
+În starea de avarie, sistemul a detectat o problemă sau o defecțiune. Când o avarie este detectată, sistemul trece în starea de oprire de urgență, în care toate dispozitivele sunt oprite pentru a preveni daune suplimentare și a proteja utilizatorii. După ce problema este rezolvată, sistemul trece în starea de funcționare, pregătit să primească și să execute comenzi de la utilizator.
+
+-------------------------------
+de activitate
+-----------------------------
+Bineînțeles, cu plăcere!
+
+Diagrama de activitate pentru comanda de pornire a iluminatului:
+Activitatea începe cu primirea comenzii de pornire a iluminatului din partea utilizatorului.
+Sistemul verifică disponibilitatea dispozitivelor și alege dispozitivul de control al iluminatului adecvat pentru a trimite comanda.
+Dispozitivul de iluminat primește comanda și pornește.
+Activitatea se încheie odată cu finalizarea comenzii și pornirea iluminatului.
+Diagrama de activitate pentru comanda de reglare a temperaturii:
+Activitatea începe cu primirea comenzii de reglare a temperaturii din partea utilizatorului.
+Sistemul verifică disponibilitatea dispozitivelor și alege dispozitivul de control al temperaturii adecvat pentru a trimite comanda.
+Dispozitivul de control al temperaturii primește comanda și inițiază reglarea temperaturii.
+Dispozitivul verifică dacă temperatura a ajuns la valoarea dorită și oprește reglarea în caz afirmativ.
+Activitatea se încheie odată cu finalizarea comenzii și reglarea temperaturii la valoarea dorită.
+Diagrama de activitate pentru comanda de deschidere a ușii de la garaj:
+Activitatea începe cu primirea comenzii de deschidere a ușii de la garaj din partea utilizatorului.
+Sistemul verifică disponibilitatea dispozitivelor și alege dispozitivul de control al ușii adecvat pentru a trimite comanda.
+Dispozitivul de control al ușii primește comanda și deschide ușa de la garaj.
+Dispozitivul verifică dacă ușa a fost deschisă complet și oprește deschiderea în caz afirmativ.
+Activitatea se încheie odată cu finalizarea comenzii și deschiderea ușii de la garaj.
+
+---------------------------------------
+
+
+În concluzie, prin studierea noțiunilor de stare, stare compusă cu substari concurente, depuse și disjuncte, activitate, condiție de gardă, bară de sincronizare (fork, join), bloc de decizie, am reușit să realizăm cu succes 3 diagrame de stare și 3 diagrame de activitate pentru sistemul informațional SmartHome. Aceste diagrame ne permit să vizualizăm modul în care diferitele dispozitive din casă interacționează între ele și cu utilizatorul, precum și să înțelegem în mod clar stările și activitățile acestora. În general, aceste diagrame reprezintă o modalitate eficientă și utilă de a înțelege și de a optimiza sistemele informaționale complexe, precum cele utilizate în casele inteligente.

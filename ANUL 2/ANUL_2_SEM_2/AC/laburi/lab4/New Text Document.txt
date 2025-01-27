@@ -1,0 +1,41 @@
+INCLUDE Irvine32.inc
+
+.data
+packed BYTE 16 dup(?)
+unpacked BYTE 8 dup(?)
+
+.code
+main PROC
+    mov esi, OFFSET packed   ; adresa începutului numărului împachetat
+    mov edi, OFFSET unpacked ; adresa începutului numărului neîmpachetat
+    
+    mov ecx, 8               ; iterații pentru a parcurge cele 16 cifre BCD împachetate
+L1:
+    mov al, [esi]            ; încarcă byte-ul curent în al
+    and al, 0Fh              ; ia doar 4 biți LSB
+    mov ah, [esi]            ; încarcă byte-ul curent în ah
+    shr ah, 4                ; ia doar 4 biți MSB
+    mov [edi], ah            ; stochează MSB-ul în edi
+    mov [edi+1], al          ; stochează LSB-ul în edi+1
+    
+    add esi, 1               ; trecem la următorul byte
+    add edi, 2               ; trecem la următorul byte neîmpachetat
+    loop L1                  ; repetă procesul pentru cele 8 cifre
+    
+    mov eax, 4               ; codul syscall pentru afișare
+    mov ebx, 1               ; file descriptor pentru stdout
+    mov ecx, OFFSET unpacked ; adresa începutului numărului neîmpachetat
+    mov edx, 8               ; numărul de caractere de afișat
+    int 80h                  ; syscall pentru afișare
+
+    exit                    ; ieșire din program
+main ENDP
+END main
+
+
+
+Acest program va prelua un număr BCD împachetat de 16 cifre stocat în memoria la adresa packed și va converti aceste cifre într-un număr BCD neîmpachetat stocat în memoria la adresa unpacked. Această conversie se face prin separarea fiecărei cifre în parte și stocarea acesteia într-un byte neîmpachetat separat, astfel încât un număr BCD neîmpachetat este format din 2 cifre BCD într-un byte.
+
+După conversia numărului BCD împachetat într-un număr BCD neîmpachetat, programul utilizează syscall-ul pentru afișarea numărului ca un șir de caractere ASCII.
+
+Pentru a rula acest program, trebuie să utilizați un emulator de calculator care acceptă instrucțiunile assembly și biblioteca Irvine32. De exemplu, puteți utiliza programul MASM32 pentru a asambla și link-ui codul și apoi să rulați fișierul executabil rezultat.

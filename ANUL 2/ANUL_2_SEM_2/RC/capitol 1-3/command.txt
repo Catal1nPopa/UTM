@@ -1,0 +1,86 @@
+			-----Router-----
+enable
+clock set 00:00:00 2 Mar 2018
+configure terminal
+hostname ....
+enable password .y.
+enable secret .x.
+exit
+			-----password----
+configure terminal
+line consol 0
+password cisco
+login
+exit
+line vty 0 15 password cisco
+login
+exit
+exit
+			----show run----
+enable
+show running-config
+			----criptarea-----
+configure terminal
+service password-encryption
+exit
+
+			---ip for interface---
+configure terminal
+interface gigabit 0/0/0
+ip address ....  255.255.255.0
+no shutdown
+exit
+
+//daca mai avem interfete, le indicam adresa fix asa//
+
+interface vlan 1
+ip address .... 255.255.255.0
+no shutdown
+
+//indicam ip in desktop//
+//+ indicam Gateway//
+
+			---Switch---
+
+enable
+config t
+enable password cisco
+enable secret cisco1
+exit
+
+config t
+line console 0
+password cisco
+login
+exti
+line vty 0 4
+password cisco
+login
+exit
+
+service password-encryption
+
+interface vlan 1
+ip address ... 255.255.255.0
+no shutdowm
+
+interface vlan 1
+ip defaul-gateway ......
+exit
+
+			---PC--- and ---Gateway--
+indicam ip
+si gateway acelasi ca la switch
+ 
+
+
+show ip interface brief
+
+
+
+------------
+login: 58561319
+
+password: oc3vbhps
+investor: gu5yzlki
+

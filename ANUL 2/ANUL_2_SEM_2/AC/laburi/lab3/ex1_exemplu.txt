@@ -1,0 +1,62 @@
+INCLUDE Irvine32.inc ; includem fisierul de antet
+
+.data ; segmentul de date
+mes1 byte "Introduceti valoarea X:", 0 ; string pentru mesajul de introducere a valorii X
+mes2 byte "Introduceti valoarea Y:", 0 ; string pentru mesajul de introducere a valorii Y
+mes3 byte "Rezultatul este:", 0 ; string pentru afisarea rezultatului
+vrx dword 0 ; variabila pentru valoarea X, initializata cu 0
+vry dword 0 ; variabila pentru valoarea Y, initializata cu 0
+rez dword 0 ; variabila pentru stocarea rezultatului, initializata cu 0
+
+.code ; segmentul de cod
+main PROC ; incepem procedura principala
+
+mov edx, offset mes1 ; mutam adresa mesajului 1 in registrul edx
+call WriteString ; afisam mesajul 1
+call ReadInt ; citim o valoare intreaga de la tastatura
+mov vrx, eax ; mutam valoarea citita in variabila vrx
+
+mov edx, offset mes2 ; mutam adresa mesajului 2 in registrul edx
+call WriteString ; afisam mesajul 2
+call ReadInt ; citim o alta valoare intreaga de la tastatura
+mov vry, eax ; mutam valoarea citita in variabila vry
+
+mov eax, vry ; mutam valoarea lui vry in eax
+mov ebx, 0 ; initializam ebx cu 0
+mov bx, 2 ; mutam valoarea 2 in partea inferioara a registrului bx
+mov dx, 0 ; initializam dx cu 0
+idiv bx ; impartim valoarea lui eax la 2
+mov ebx, vrx ; mutam valoarea lui vrx in ebx
+cmp ebx, eax ; comparam ebx cu valoarea din eax
+jna con1 ; daca ebx este mai mic sau egal cu eax, saltam la con1
+
+
+mov eax, vrx ; mutam valoarea lui vrx in eax
+mov bx, 2 ; mutam valoarea 2 in partea inferioara a registrului bx
+mul bx ; inmultim valoarea din eax cu 2
+mov ebx, vry ; mutam valoarea lui vry in ebx
+sub ebx, eax ; scadem valoarea din eax din valoarea lui ebx
+mov eax, ebx ; mutam valoarea lui ebx in eax
+mov bx, 5 ; mutam valoarea 5 in partea inferioara a registrului bx
+cwd ; extindem semnul din dx in ax
+idiv bx ; impartim valoarea din eax la 5
+add eax, 150 ; adaugam 150 la valoarea din eax
+mov rez, eax ; mutam valoarea din eax in variabila rez
+jmp ex ; sarim la eticheta ex
+
+con1:
+mov eax, vrx ; mutam valoarea lui vrx in eax
+mov bx, 2 ; mutam valoarea 2 in partea inferioara a registrului bx
+mul bx ; inmultim valoarea din eax cu 2
+sub eax, 64 ; scazem 
+sub eax, 64
+add eax, vry
+mov rez, eax
+
+ex : mov edx, offset mes3
+call WriteString
+call WriteInt
+call Crlf
+exit
+main ENDP
+END main

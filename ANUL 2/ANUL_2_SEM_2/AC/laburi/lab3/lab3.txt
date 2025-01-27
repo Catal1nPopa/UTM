@@ -1,0 +1,127 @@
+//////////////////////
+/////varianta 1////
+
+include Irvine32.inc
+
+.data
+X dword ?
+Y dword ?
+Z dword ?
+msg1 byte "Introduceti valoarea lui X: ",0
+msg2 byte "Introduceti valoarea lui Y: ",0
+msg3 byte "Valoarea lui Z este: ",0
+
+.code
+main proc
+    ; citirea valorilor X si Y de la tastatură
+    mov edx, offset msg1
+    call writestring
+    call readint
+    mov X, eax
+
+    mov edx, offset msg2
+    call writestring
+    call readint
+    mov Y, eax
+
+    ; verificarea condițiilor și calcularea valorii Z
+    cmp Y, X+100
+    jle Else1
+    mov eax, Y
+    sub eax, X
+    shl eax, 1
+    add eax, Y
+    mov Z, eax
+    jmp EndIf1
+
+Else1:
+    test X, 1
+    jz Else2
+    mov eax, X
+    shr eax, 2
+    add eax, eax
+    add eax, Y
+    mov Z, eax
+    jmp EndIf1
+
+Else2:
+    mov eax, Y
+    add eax, eax
+    add eax, X
+    mov Z, eax
+
+EndIf1:
+    ; afișarea rezultatului pe ecran
+    mov edx, offset msg3
+    call writestring
+    mov eax, Z
+    call writeint
+    call crlf
+
+    ; terminarea programului
+    exit
+main endp
+
+
+/////////////////
+//varianta 2///
+include Irvine32.inc
+
+.data
+X dword ?
+Y dword ?
+Z dword ?
+msg byte "Valoarea lui Z este: ",0
+
+.code
+main proc
+    ; generarea valorilor aleatoare pentru X și Y
+    call randomize
+    mov eax, 101
+    call randomrange
+    sub eax, 50
+    mov X, eax
+
+    mov eax, 201
+    call randomrange
+    sub eax, 100
+    mov Y, eax
+
+    ; verificarea condițiilor și calcularea valorii Z
+    cmp Y, X+100
+    jle Else1
+    mov eax, Y
+    sub eax, X
+    shl eax, 1
+    add eax, Y
+    mov Z, eax
+    jmp EndIf1
+
+Else1:
+    test X, 1
+    jz Else2
+    mov eax, X
+    shr eax, 2
+    add eax, eax
+    add eax, Y
+    mov Z, eax
+    jmp EndIf1
+
+Else2:
+    mov eax, Y
+    add eax, eax
+    add eax, X
+    mov Z, eax
+
+EndIf1:
+    ; afișarea rezultatului pe ecran
+    mov edx, offset msg
+    call writestring
+    mov eax, Z
+    call writeint
+    call crlf
+
+    ; terminarea programului
+    exit
+main endp
+

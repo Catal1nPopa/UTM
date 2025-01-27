@@ -1,0 +1,76 @@
+Internet - the network of networks
+
+ISP -  Internet Service Provider
+
+SP -  Service Provider
+
+SOHO - Small office and home office 
+
+LAN - Local Area Networks 
+
+WANs - Wide Area Networks 
+
+DSL - digital subscriber line
+
+CLI - command-line interface 
+
+GUI - graphical user interface
+
+firmware - The operating system on home routers
+
+IOS - Internetwork Operating System 
+
+Cable - Typically offered by cable television service providers, the internet data signal transmits on the same cable that delivers cable television. 
+
+DSL - Digital Subscriber Lines also provide high bandwidth, high availability, and an always-on connection to the internet. 
+
+Cellular - Cellular internet access uses a cell phone network to connect. 
+
+Satellite - The availability of satellite internet access is a benefit in those areas that would otherwise have no internet connectivity at all.
+
+Dial-up Telephone - An inexpensive option that uses any phone line and a modem.
+
+Dedicated Leased Line - Leased lines are reserved circuits within the service provider’s network that connect geographically separated offices for private voice and/or data networking. 
+
+Metro Ethernet - This is sometimes known as Ethernet WAN. In this module, we will refer to it as Metro Ethernet. Metro ethernets extend LAN access technology into the WAN. 
+
+Business DSL - Business DSL is available in various formats. A popular choice is Symmetric Digital Subscriber Line (SDSL) which is similar to the consumer version of DSL but provides uploads and downloads at the same high speeds.
+
+Satellite - Satellite service can provide a connection when a wired solution is not available.
+
+QoS - Quality of Service
+
+Network administrators must address two types of network security concerns: network infrastructure security and information security
+
+BYOD - Bring Your Own Device
+
+BYOD means any device, with any ownership, used anywhere.
+
+WISP - Wireless Internet Service Provider  \
+
+WLANs - wireless local area networks
+
+IPS - Intrusion prevention systems  
+
+SSH - Secure Shell
+
+reload - command to remove an unsaved running config is the brief amount of time the device will be offline, causing network downtime. 
+
+erase startup-config - clear all the configurations
+
+ip default-gateway -  ip-address global configuration command for switches
+
+show ip interface brief - verifying the condition of the switch interfaces
+
+Unicast - Information is being transmitted to a single end device.
+
+Multicast - Information is being transmitted to a one or more end devices.
+
+Broadcast - Information is being transmitted to all end devices.
+
+
+ nume
+banner
+3 parole
+ip 
+startup-config
