@@ -1,0 +1,369 @@
+{
+  "id": "8bd3884a-d262-4ecb-b8c2-76c4957bb37f",
+  "version": "2.0",
+  "name": "lab3",
+  "url": "https://login.yahoo.com/myaccount/personalinfo/?src=homepage&activity=ybar-acctinfo&pspid=2023538075&.done=https%3A%2F%2Fwww.yahoo.com%2F&scrumb=5hKCWmFGsgi&anchorId=profileBasicInfoCard",
+  "tests": [{
+    "id": "20b62f18-026d-4d89-9a61-2fdbfb484bf2",
+    "name": "logare",
+    "commands": [{
+      "id": "0e0ee66d-d9a4-48f4-88d2-2b4d3ec637b8",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.yahoo.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce0a857c-8799-4513-a7a7-4dce150e7b4d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bfce556a-a853-462a-a1ad-b5f86b03ae10",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=.\\_yb_jtrpet", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//div[@id='login-container']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://login.yahoo.com/?.lang=en-US&src=homepage&.done=https%3A%2F%2Fwww.yahoo.com%2F&pspid=2023538075&activity=ybar-signin')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3de77c2-244a-4cc2-8121-4840ea3d94ce",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-username",
+      "targets": [
+        ["id=login-username", "id"],
+        ["name=username", "name"],
+        ["css=#login-username", "css:finder"],
+        ["xpath=//input[@id='login-username']", "xpath:attributes"],
+        ["xpath=//div[@id='username-country-code-field']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "popacatalin40"
+    }, {
+      "id": "6638afef-55e2-48cf-b3a1-1ae60c1175c2",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-signin",
+      "targets": [
+        ["id=login-signin", "id"],
+        ["name=signin", "name"],
+        ["css=#login-signin", "css:finder"],
+        ["xpath=//input[@id='login-signin']", "xpath:attributes"],
+        ["xpath=//form[@id='login-username-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21791920-275b-4da3-8776-aafbdb71f4ee",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-passwd",
+      "targets": [
+        ["id=login-passwd", "id"],
+        ["name=password", "name"],
+        ["css=#login-passwd", "css:finder"],
+        ["xpath=//input[@id='login-passwd']", "xpath:attributes"],
+        ["xpath=//div[@id='password-container']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Shade.2002"
+    }, {
+      "id": "7851d0cd-cdf8-4b81-b51a-634ddfa21585",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-signin",
+      "targets": [
+        ["id=login-signin", "id"],
+        ["name=verifyPassword", "name"],
+        ["css=#login-signin", "css:finder"],
+        ["xpath=//button[@id='login-signin']", "xpath:attributes"],
+        ["xpath=//div[@id='password-challenge']/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cafba977-d7ed-477c-b418-d8685cc14ef7",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-signout-link",
+      "targets": [
+        ["id=profile-signout-link", "id"],
+        ["linkText=Sign out", "linkText"],
+        ["css=#profile-signout-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign out')]", "xpath:link"],
+        ["xpath=//a[@id='profile-signout-link']", "xpath:attributes"],
+        ["xpath=//div[@id='ybarAccountMenuBody']/div[3]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://login.yahoo.com/account/logout?logout_all=1&src=homepage&crumb=tK.i1en1UgV&.done=https%3A%2F%2Fwww.yahoo.com%2F')]", "xpath:href"],
+        ["xpath=//div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e708bea5-916a-497b-9585-c9963e398b5a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.stream-item:nth-child(4) .StretchedBox",
+      "targets": [
+        ["css=.stream-item:nth-child(4) .StretchedBox", "css:finder"],
+        ["xpath=//div[@id='module-stream']/ul/li[4]/div/div[2]/h3/a/u", "xpath:idRelative"],
+        ["xpath=//li[4]/div/div[2]/h3/a/u", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4c6abe2e-5cc9-461d-8129-9e2901b6129b",
+    "name": "facebock edit",
+    "commands": [{
+      "id": "35a4dc2c-33e1-4a96-8579-09cb73ff8754",
+      "comment": "",
+      "command": "open",
+      "target": "https://login.yahoo.com/myaccount/personalinfo/?src=homepage&activity=ybar-acctinfo&pspid=2023538075&.done=https%3A%2F%2Fwww.yahoo.com%2F&scrumb=5hKCWmFGsgi&anchorId=profileBasicInfoCard",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d501bc8c-d584-4fea-bac9-fb98094d5fce",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8022019-fb8c-400a-b261-f494347a848e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,272)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad006a31-7f71-4eb3-9e53-2b8ba668393d",
+      "comment": "",
+      "command": "click",
+      "target": "id=lnkUpdatePersonalDetails",
+      "targets": [
+        ["id=lnkUpdatePersonalDetails", "id"],
+        ["linkText=Update personal details", "linkText"],
+        ["css=#lnkUpdatePersonalDetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Update personal details')]", "xpath:link"],
+        ["xpath=//a[@id='lnkUpdatePersonalDetails']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/section/div[2]/ul/li[2]/div/div[2]/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/myaccount/personalinfo/basic/?src=homepage&activity=ybar-acctinfo&pspid=2023538075&scrumb=5hKCWmFGsgi&done=https%3A%2F%2Fwww.yahoo.com%2F&backTo=%2Fpersonalinfo%2F%3Fsrc%3Dhomepage%26activity%3Dybar-acctinfo%26pspid%3D2023538075%26.done%3Dhttps%253A%252F%252Fwww.yahoo.com%252F%26scrumb%3D5hKCWmFGsgi%26anchorId%3DprofileBasicInfoCard')]", "xpath:href"],
+        ["xpath=//li[2]/div/div[2]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Update personal details')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "be69468e-486c-4374-bb42-629d33113920",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=lnkUpdatePersonalDetails",
+      "targets": [
+        ["id=lnkUpdatePersonalDetails", "id"],
+        ["linkText=Update personal details", "linkText"],
+        ["css=#lnkUpdatePersonalDetails", "css:finder"],
+        ["xpath=//a[contains(text(),'Update personal details')]", "xpath:link"],
+        ["xpath=//a[@id='lnkUpdatePersonalDetails']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/section/div[2]/ul/li[2]/div/div[2]/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/myaccount/personalinfo/basic/?src=homepage&activity=ybar-acctinfo&pspid=2023538075&scrumb=5hKCWmFGsgi&done=https%3A%2F%2Fwww.yahoo.com%2F&backTo=%2Fpersonalinfo%2F%3Fsrc%3Dhomepage%26activity%3Dybar-acctinfo%26pspid%3D2023538075%26.done%3Dhttps%253A%252F%252Fwww.yahoo.com%252F%26scrumb%3D5hKCWmFGsgi%26anchorId%3DprofileBasicInfoCard')]", "xpath:href"],
+        ["xpath=//li[2]/div/div[2]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Update personal details')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f724e14-a004-4f7c-bb67-09d4b9a40bd9",
+      "comment": "",
+      "command": "click",
+      "target": "id=txtFirstName",
+      "targets": [
+        ["id=txtFirstName", "id"],
+        ["css=#txtFirstName", "css:finder"],
+        ["xpath=//input[@id='txtFirstName']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60136ca7-0fca-405e-a535-76f96f98cd41",
+      "comment": "",
+      "command": "click",
+      "target": "id=txtFirstName",
+      "targets": [
+        ["id=txtFirstName", "id"],
+        ["css=#txtFirstName", "css:finder"],
+        ["xpath=//input[@id='txtFirstName']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bbd2db55-e851-4d0b-b6c1-3a762ba43ba7",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=txtFirstName",
+      "targets": [
+        ["id=txtFirstName", "id"],
+        ["css=#txtFirstName", "css:finder"],
+        ["xpath=//input[@id='txtFirstName']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85899e93-46a8-4688-bbcc-922da130532c",
+      "comment": "",
+      "command": "click",
+      "target": "id=txtFirstName",
+      "targets": [
+        ["id=txtFirstName", "id"],
+        ["css=#txtFirstName", "css:finder"],
+        ["xpath=//input[@id='txtFirstName']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4cf7e56-5bb9-4e31-b156-7d97cc2a2cf8",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div/div/span/input",
+      "targets": [
+        ["id=txtFirstName", "id"],
+        ["css=#txtFirstName", "css:finder"],
+        ["xpath=//input[@id='txtFirstName']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "Ion"
+    }, {
+      "id": "1ab7d275-3bce-484e-8802-9eb3bcdca5c6",
+      "comment": "",
+      "command": "type",
+      "target": "id=txtLastName",
+      "targets": [
+        ["id=txtLastName", "id"],
+        ["css=#txtLastName", "css:finder"],
+        ["xpath=//input[@id='txtLastName']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div/div/span[2]/input", "xpath:idRelative"],
+        ["xpath=//span[2]/input", "xpath:position"]
+      ],
+      "value": "Vasile"
+    }, {
+      "id": "ced8df91-926e-4f3b-8a8a-0080ca3bab2d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.date-input-month-title",
+      "targets": [
+        ["css=.date-input-month-title", "css:finder"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div/div/div/div[2]/span/span/span/span", "xpath:idRelative"],
+        ["xpath=//span/span/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0035697-71cb-43b0-80ae-91d7cd81311a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gender-container",
+      "targets": [
+        ["css=.gender-container", "css:finder"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[15]/div/div/div/div/div[2]/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "703588d2-f2fa-49a5-945e-111dcb0bf2aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dd-icon > svg",
+      "targets": [
+        ["css=.dd-icon > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "0962867c-a4fb-4dd8-a238-5e66e178ea80",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dd-list-item:nth-child(2)",
+      "targets": [
+        ["css=.dd-list-item:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div/div/div/div/span/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//span/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'Male')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42b16751-4631-4d0d-a939-b5bb7ba52998",
+      "comment": "",
+      "command": "click",
+      "target": "id=txtNickname",
+      "targets": [
+        ["id=txtNickname", "id"],
+        ["css=#txtNickname", "css:finder"],
+        ["xpath=//input[@id='txtNickname']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div/div/span[3]/input", "xpath:idRelative"],
+        ["xpath=//span[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7a22525-2688-43b1-bd79-5db08c22cd36",
+      "comment": "",
+      "command": "type",
+      "target": "id=txtNickname",
+      "targets": [
+        ["id=txtNickname", "id"],
+        ["css=#txtNickname", "css:finder"],
+        ["xpath=//input[@id='txtNickname']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div/div/span[3]/input", "xpath:idRelative"],
+        ["xpath=//span[3]/input", "xpath:position"]
+      ],
+      "value": "Alexei"
+    }, {
+      "id": "95f52f5d-989c-4607-9a93-6cbb6f560756",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSave",
+      "targets": [
+        ["id=btnSave", "id"],
+        ["css=#btnSave", "css:finder"],
+        ["xpath=//button[@id='btnSave']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save updates')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "682ac538-d4f0-41bb-968e-969f4bb3b20a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSave",
+      "targets": [
+        ["id=btnSave", "id"],
+        ["css=#btnSave", "css:finder"],
+        ["xpath=//button[@id='btnSave']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save updates')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ff5f2370-3761-4b7f-82d4-174ce010c85b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["20b62f18-026d-4d89-9a61-2fdbfb484bf2"]
+  }],
+  "urls": ["https://login.yahoo.com/", "https://www.yahoo.com/", "https://www.facebook.com/", "https://login.yahoo.com/myaccount/personalinfo/?src=homepage&activity=ybar-acctinfo&pspid=2023538075&.done=https%3A%2F%2Fwww.yahoo.com%2F&scrumb=5hKCWmFGsgi&anchorId=profileBasicInfoCard"],
+  "plugins": []
+}

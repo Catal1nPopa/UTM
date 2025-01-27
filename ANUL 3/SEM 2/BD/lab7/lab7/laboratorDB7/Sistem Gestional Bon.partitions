@@ -1,0 +1,165 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f6ef48cc-d845-47e2-bd51-1fe103d58fd5" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Sistem Gestional Bon</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Bon</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="6be6c4a7-ead0-4d96-bf7c-96d028e7eeb2">
+          <ID>Bon</ID>
+          <Name>Bon</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="07382764-43ed-40df-8f21-337fb21fe691">
+            <DataSourceViewID>Sistem Gestional Bon</DataSourceViewID>
+            <TableID>dbo_Bon</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Magazin</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="6fda0f79-7d8f-4206-b423-66e828da8e97">
+          <ID>Magazin</ID>
+          <Name>Magazin</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c28abfbb-e720-45c4-a28f-dcb76b1b6296">
+            <DataSourceViewID>Sistem Gestional Bon</DataSourceViewID>
+            <TableID>dbo_Magazin</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Produse</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="062a8b71-73da-4a7c-92c3-266d90a70133">
+          <ID>Produse</ID>
+          <Name>Produse</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="09c8a375-2015-4551-a74d-5cb10f40444c">
+            <DataSourceViewID>Sistem Gestional Bon</DataSourceViewID>
+            <TableID>dbo_Produse</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Produse Bon</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a40b9df3-3d65-40be-8fda-e7174798bbef">
+          <ID>Produse Bon</ID>
+          <Name>Produse Bon</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="905baf44-9aa1-44a9-a221-ed29cd337867">
+            <DataSourceViewID>Sistem Gestional Bon</DataSourceViewID>
+            <TableID>dbo_ProduseBon</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Sales</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="c9d2f897-c402-4b40-bed2-452103464baf">
+          <ID>Sales</ID>
+          <Name>Sales</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b011787f-7023-4e47-a8f7-e1a21c2370ab">
+            <DataSourceViewID>Sistem Gestional Bon</DataSourceViewID>
+            <TableID>dbo_Sales</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Sysdiagrams</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="c6ff97b2-fb98-4eab-be65-1f843c9352e3">
+          <ID>Sysdiagrams</ID>
+          <Name>Sysdiagrams</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="abcbff0b-7921-453f-a99e-4f4839a30789">
+            <DataSourceViewID>Sistem Gestional Bon</DataSourceViewID>
+            <TableID>dbo_sysdiagrams</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Valabilitate</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="e87ea183-36d3-45af-a496-a06d7c3087d8">
+          <ID>Valabilitate</ID>
+          <Name>Valabilitate</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="0f3941f9-5f51-4bfb-b347-b1cb71020169">
+            <DataSourceViewID>Sistem Gestional Bon</DataSourceViewID>
+            <TableID>dbo_Valabilitate</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vanzari</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="57a66c7f-4f0f-4f9c-a6f5-d8ba4986af71">
+          <ID>Vanzari</ID>
+          <Name>Vanzari</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="3cf51bce-dfaf-4a16-a791-58f7234a2ec5">
+            <DataSourceViewID>Sistem Gestional Bon</DataSourceViewID>
+            <TableID>dbo_Vanzari</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

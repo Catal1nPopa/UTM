@@ -1,0 +1,791 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5dcac559-6773-4210-9b09-2f5f29bd21da" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Sistem Gestional Bon</ID>
+  <Name>Sistem Gestional Bon</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="bc9279af-94a9-4fd2-9609-b8c43090e2ef">
+      <ID>Bon</ID>
+      <Name>Bon</Name>
+      <DimensionID>Bon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0d81bdbb-b1dc-4b96-a12b-ea8e31045dce">
+          <AttributeID>Bon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="04795527-58e1-4868-82b2-c1c5fcad84e2">
+          <AttributeID>Cumparator ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8969839c-2477-40c4-85e8-67a8bcaad37b">
+          <AttributeID>Angajat ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f0210420-8993-459e-a69d-3ae7e8dad57c">
+      <ID>Cumparatori</ID>
+      <Name>Cumparatori</Name>
+      <DimensionID>Cumparatori</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="675055f4-9231-45c4-bf06-c92a801590a3">
+          <AttributeID>Cumparator ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="14b52caa-2d38-48bc-8169-3150ad07b5b9">
+      <ID>Angajati</ID>
+      <Name>Angajati</Name>
+      <DimensionID>Angajati</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a2e0f544-8000-4cc5-8f7d-ddd094d6ecdd">
+          <AttributeID>Angajat ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f7344650-1041-46f7-a9cb-016fd620a61d">
+          <AttributeID>Functie ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="67ae40aa-ede7-479a-b2ad-ed8c10fe6e2a">
+      <ID>Magazin</ID>
+      <Name>Magazin</Name>
+      <DimensionID>Magazin</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a575d165-79f1-46a5-bf20-6ea440d8fb49">
+          <AttributeID>Magazin ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="2e7d93ee-8e70-43f9-b19d-f5e895668778">
+      <ID>Produse</ID>
+      <Name>Produse</Name>
+      <DimensionID>Produse</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a1aeae4f-8888-4253-8110-417f585bced5">
+          <AttributeID>Produs ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="019b685c-3314-4452-99d7-8f16e444fadd">
+          <AttributeID>Furnizor ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="22321eea-39a7-4696-85c9-61cd906f1beb">
+      <ID>Furnizori</ID>
+      <Name>Furnizori</Name>
+      <DimensionID>Furnizori</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b7a53d52-ef6c-477d-8968-f8584b6448cd">
+          <AttributeID>Furnizor ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="147a02b6-7526-42d8-9ffa-2577d4c9290c">
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <DimensionID>Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e393d232-c8c0-4616-bfea-f536a2940870">
+          <AttributeID>PK Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="48754619-40e7-4183-99fb-4280677959e3">
+      <ID>Product</ID>
+      <Name>Product</Name>
+      <DimensionID>Product</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c4bf092c-a93a-4418-a2ed-ab02bada421e">
+          <AttributeID>PK Sales Order</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="00929b62-9fda-4f0d-9682-44606ee8237a">
+      <ID>Sysdiagrams</ID>
+      <Name>Sysdiagrams</Name>
+      <DimensionID>Sysdiagrams</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a8b220b3-0624-412e-8a08-153b405d95d8">
+          <AttributeID>Diagram Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="32fca2eb-432e-4532-a3f3-46ca82a52096">
+      <ID>Time</ID>
+      <Name>Time</Name>
+      <DimensionID>Time</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="65caf4cf-60be-4335-965e-c769a702eb66">
+          <AttributeID>PK Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="4895f1cf-dcc7-4226-b940-fc0e0f7572ec">
+      <ID>Bon</ID>
+      <Name>Bon</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="fb8efcee-1a69-465d-a9a8-6649d9c6fd3d">
+          <ID>Suma Totala</ID>
+          <Name>Suma Totala</Name>
+          <Source dwd:design-time-name="82e2a8f2-cb2b-4f33-83e2-516cdd699a47">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="11a0f18b-d1a6-4352-90e0-4d6a4ca02705">
+              <TableID>dbo_Bon</TableID>
+              <ColumnID>SumaTotala</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e92c9b58-13ef-40b1-978b-8b572d5930af">
+          <ID>Bon Count</ID>
+          <Name>Bon Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="99ec5ccf-e6bd-4dfb-a2ad-c4fb53dc983d">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="aa585601-bfe7-4e5a-89b8-54441ac08974">
+              <TableID>dbo_Bon</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="10977a8a-8cf7-4805-9a6b-67b064c7fd1d">
+          <CubeDimensionID>Bon</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cebac3e4-59ed-4067-9128-9b003beb4538">
+              <AttributeID>Bon ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c0aa7e1b-5282-47d4-92ba-4c939933d1c6">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c6e78518-ae52-40a6-97a4-42ac8215bbf3">
+                    <TableID>dbo_Bon</TableID>
+                    <ColumnID>BonID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="849e6484-0c48-4984-9f14-bc1fa2ac2c9e">
+          <CubeDimensionID>Cumparatori</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="543559d5-ad4d-452b-82c0-26e96ba60728">
+              <AttributeID>Cumparator ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="852929ed-553c-49c1-bb4e-22d794f3122f">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="988ff883-3b0b-4e69-97bc-3ae856c01972">
+                    <TableID>dbo_Bon</TableID>
+                    <ColumnID>CumparatorID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="56b62ad6-8bde-408b-a862-965da8495688">
+          <CubeDimensionID>Angajati</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e54e9f49-d709-433b-aef8-563ba8eb71ca">
+              <AttributeID>Angajat ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d18aca41-1610-4bb4-b9d8-a526d30fb30b">
+                  <DataType>SmallInt</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c446ae0d-6d24-4fb4-80a2-9cf7731a4852">
+                    <TableID>dbo_Bon</TableID>
+                    <ColumnID>AngajatID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="dba87069-903c-4831-9a73-0df9ab5915c5">
+      <ID>Magazin</ID>
+      <Name>Magazin</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2e48fc3e-73dd-4686-9559-905be028b71f">
+          <ID>Magazin Count</ID>
+          <Name>Magazin Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="6aafc87f-f048-42b6-9029-c22bf836a93f">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="8f8806f4-1241-4872-bc27-fbb78487a785">
+              <TableID>dbo_Magazin</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="42f4acce-fd4f-47a6-9930-ead6af75a13b">
+          <CubeDimensionID>Magazin</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b7ca80ff-10fb-4a89-9f24-5d0a608dd07a">
+              <AttributeID>Magazin ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d8bddbfa-26b1-487f-8cb5-378225c4a0d9">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2f288201-e777-4041-b273-46c8d0aaeace">
+                    <TableID>dbo_Magazin</TableID>
+                    <ColumnID>MagazinID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="87f760b4-7981-4249-84df-f6034d153712">
+      <ID>Produse</ID>
+      <Name>Produse</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="63552a39-078f-4074-bf58-67f84a253d64">
+          <ID>Magazin ID</ID>
+          <Name>Magazin ID</Name>
+          <Source dwd:design-time-name="9a921d94-499b-4c08-acc3-d3657c3f40af">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="77d48755-93e2-4130-ad32-116f37f0fecf">
+              <TableID>dbo_Produse</TableID>
+              <ColumnID>MagazinID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="96dab475-1c9f-41bf-b8a3-7c3ae7525988">
+          <ID>Pret Produs</ID>
+          <Name>Pret Produs</Name>
+          <Source dwd:design-time-name="60aaad69-f031-4c94-9849-8c73c7f9d452">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a1d7af98-e535-4a09-be34-fcece8b217ad">
+              <TableID>dbo_Produse</TableID>
+              <ColumnID>PretProdus</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b888d73b-6fb6-496e-9e06-bc791f344678">
+          <ID>Produse Count</ID>
+          <Name>Produse Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="17ad5761-9700-4612-85f9-f6145d767ca8">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="f371babb-2dfc-43ed-ab46-2dabf4996131">
+              <TableID>dbo_Produse</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="3b149eeb-98c7-4e5a-856f-ffb62b695f4a">
+          <CubeDimensionID>Produse</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c5f34cea-f92c-4836-8af4-dea6000e9cdf">
+              <AttributeID>Produs ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ce50e2b7-3a22-4bc2-b085-12368c338684">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9157bd69-5bc8-4dfa-8177-8bc4797f69f0">
+                    <TableID>dbo_Produse</TableID>
+                    <ColumnID>ProdusID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="afdc4cb8-8b68-471e-bd83-543eea1fc186">
+          <CubeDimensionID>Furnizori</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3f25c23b-24dd-4add-ad95-542966799df2">
+              <AttributeID>Furnizor ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5640193e-a5c7-4236-b263-3e475ef6152c">
+                  <DataType>SmallInt</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9ab89d7c-d8c0-4291-aea6-7c4bb797906f">
+                    <TableID>dbo_Produse</TableID>
+                    <ColumnID>FurnizorID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="0f810694-d8a8-4a82-807e-8ea1fe3eb3f0">
+      <ID>Produse Bon</ID>
+      <Name>Produse Bon</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="a8385d85-4149-47eb-917f-1aed297ac9e6">
+          <ID>Cantitate</ID>
+          <Name>Cantitate</Name>
+          <Source dwd:design-time-name="f02c8f2d-c69e-4c44-8c42-377c31221421">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4692d7a0-dc78-4377-9da5-e6b5d5b3d022">
+              <TableID>dbo_ProduseBon</TableID>
+              <ColumnID>Cantitate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="26456d85-849f-41b0-98bf-1c7afcf3d41b">
+          <ID>Produse Bon Count</ID>
+          <Name>Produse Bon Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="91dbad5c-025a-4189-afab-b0f0117f64fe">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="010ec1c4-e781-4b05-a098-cc13e726e3e0">
+              <TableID>dbo_ProduseBon</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8faf34db-09e0-4fd1-917a-7a24118396dd">
+          <CubeDimensionID>Produse</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2f98b310-6afd-4e57-a99f-41ec89e7983a">
+              <AttributeID>Produs ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3afbf5c4-f24e-43b7-a5a8-d4c17db3d7b3">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="36566cb6-ff16-4b01-ac21-c7b944071f59">
+                    <TableID>dbo_ProduseBon</TableID>
+                    <ColumnID>ProdusID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7159dfaa-9311-4f1d-8654-6347c4c08df5">
+          <CubeDimensionID>Bon</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="84a339a5-9e3a-4571-acf8-80bce81aa9cf">
+              <AttributeID>Bon ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="24171baf-a006-4f5e-bd0a-4f9338de7c8d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2a1912b3-5494-4453-a181-b923b359f351">
+                    <TableID>dbo_ProduseBon</TableID>
+                    <ColumnID>BonID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="6b82470f-b2fd-441f-be81-0209158e8da2">
+          <CubeDimensionID>Furnizori</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="26f08d6b-4984-40fc-9c9e-c881ae8d747e">
+              <AttributeID>Furnizor ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Produse</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Furnizor ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="66449d5a-8428-40d6-8155-7f5c014d3030">
+          <CubeDimensionID>Cumparatori</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="03413871-71a9-4903-b34e-09f682cb30b7">
+              <AttributeID>Cumparator ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Bon</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Cumparator ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="22c5fb04-475e-4beb-8434-cfc9cc702761">
+          <CubeDimensionID>Angajati</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b4396648-ad36-4fb8-a9fb-8a8a529b65f4">
+              <AttributeID>Angajat ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Bon</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Angajat ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="a84313bd-678c-4d81-aa5a-029d3a4fa292">
+      <ID>Sales</ID>
+      <Name>Sales</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="7c49112d-fed4-470e-84e6-bad557d8e27d">
+          <ID>Sales Dollars</ID>
+          <Name>Sales Dollars</Name>
+          <Source dwd:design-time-name="783cc214-f98c-46a6-82ce-12508e4afb0e">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="755894d9-bed0-4de2-953a-382912b2fbfc">
+              <TableID>dbo_Sales</TableID>
+              <ColumnID>Sales_Dollars</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="164ca7a0-736e-4d89-a10b-4a4d6350be6c">
+          <ID>Sales Units</ID>
+          <Name>Sales Units</Name>
+          <Source dwd:design-time-name="05ab3903-db0f-486a-8c6b-682b17efacd5">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="dce032c6-f71c-4032-9954-39de94fd6372">
+              <TableID>dbo_Sales</TableID>
+              <ColumnID>Sales_Units</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ce87c131-46f7-438f-ae89-bf826485e8b5">
+          <ID>Sales Count</ID>
+          <Name>Sales Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="10e4042a-007a-4c6f-9d52-c6791f00d791">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="8e964796-7457-4f4f-9bcd-de754746d5d9">
+              <TableID>dbo_Sales</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="145c0a66-3ddc-4191-966d-cfbdbacf87a1">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ed7a8437-7032-4e74-8ec7-da35b07e2390">
+              <AttributeID>PK Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4ba6c343-0194-43db-a702-9b2130f5326b">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6008c898-1f85-4fd1-8f60-6feafeaf7663">
+                    <TableID>dbo_Sales</TableID>
+                    <ColumnID>FK_Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6b4de748-3dba-4f07-af68-297538e76136">
+          <CubeDimensionID>Product</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="18a2892c-4d09-4f88-89e0-9092e9e6b78b">
+              <AttributeID>PK Sales Order</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c5146b55-7c98-45d4-a3ef-7627b0c7cf83">
+                  <DataType>WChar</DataType>
+                  <DataSize>20</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ace7efe8-4550-4d2e-a039-807023b39279">
+                    <TableID>dbo_Sales</TableID>
+                    <ColumnID>FK_Product</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="fde8178f-f566-41fe-8180-e4fae561ac46">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0ca3fce4-45f8-4d49-91b3-0dfbf3a6df2c">
+                    <TableID>dbo_Sales</TableID>
+                    <ColumnID>FK_Product1</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="7dd0e377-aeb7-417b-a8b6-f5b4ebec3d9f">
+      <ID>Sysdiagrams</ID>
+      <Name>Sysdiagrams</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="ff97c62a-c043-460f-a6de-49a669d77cc6">
+          <ID>Principal Id</ID>
+          <Name>Principal Id</Name>
+          <Source dwd:design-time-name="d066ff94-4625-4d4f-9bc9-3c791a6fadea">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="52102bcf-2dcc-4419-a5fe-9b099c188575">
+              <TableID>dbo_sysdiagrams</TableID>
+              <ColumnID>principal_id</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1c613a29-2da6-49c8-b559-98d76913c981">
+          <ID>Version</ID>
+          <Name>Version</Name>
+          <Source dwd:design-time-name="4c1ce0a0-0956-43f3-b42e-c41e57ab150a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="adfe7515-8b3f-46f3-a457-7adfaacbaf2b">
+              <TableID>dbo_sysdiagrams</TableID>
+              <ColumnID>version</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="34fdeb61-9a8a-42e3-ae5a-215e772f25d7">
+          <ID>Sysdiagrams Count</ID>
+          <Name>Sysdiagrams Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="48bb293f-fe65-456b-b360-13169560eff2">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="ccbce64f-3aff-4a7f-b23e-feb36568ae6e">
+              <TableID>dbo_sysdiagrams</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="89e12eaa-d293-4471-8d3f-a3d15c41fd64">
+          <CubeDimensionID>Sysdiagrams</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="590094fd-c93d-4d9b-920c-3e046926b9a4">
+              <AttributeID>Diagram Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="73f98f88-fd38-43e8-9656-1237b8f54a84">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1b26d48d-abdc-44e6-b4fc-a6b71fa08798">
+                    <TableID>dbo_sysdiagrams</TableID>
+                    <ColumnID>diagram_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="b1a9e4cf-75b8-4294-93e5-b8c3d0121e62">
+      <ID>Valabilitate</ID>
+      <Name>Valabilitate</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="477096cb-613b-4d37-a2c8-f5054b05ac30">
+          <ID>Valabilitate Count</ID>
+          <Name>Valabilitate Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="bf0b6983-3bee-402c-96af-0bd725ffc3a0">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="3f597382-a6cd-42cb-8970-444e9fcf4d5e">
+              <TableID>dbo_Valabilitate</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e7360212-5c0d-4ae5-845b-2e2462160166">
+          <CubeDimensionID>Produse</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fa735462-49aa-4aa0-88ab-49f7af452e52">
+              <AttributeID>Produs ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="793b159b-07ee-45fc-acf1-9be37cd5ea28">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d86d1f4d-90aa-4281-a8cc-2849497b4d44">
+                    <TableID>dbo_Valabilitate</TableID>
+                    <ColumnID>ProdusID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="5f692027-e756-4ed5-8a61-4ccee03e72e3">
+          <CubeDimensionID>Furnizori</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5c2b1093-dff2-494c-a6ad-3630135f701a">
+              <AttributeID>Furnizor ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Produse</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Furnizor ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="3ab6deb0-16b1-4d69-b979-b7a65b4c9a21">
+      <ID>Vanzari</ID>
+      <Name>Vanzari</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="e0ad08a0-5c03-4ba3-ba46-80849f0ed5bf">
+          <ID>Vanzari Produse</ID>
+          <Name>Vanzari Produse</Name>
+          <Source dwd:design-time-name="fc9a9f1d-0096-486b-9c15-ed303b6f526a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f9cad704-c52d-435f-a77c-5772fb864cd3">
+              <TableID>dbo_Vanzari</TableID>
+              <ColumnID>Vanzari_Produse</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="5e9e7baf-5321-4e93-9fe9-bc3267a6f5fd">
+          <ID>Vanzari Bon</ID>
+          <Name>Vanzari Bon</Name>
+          <Source dwd:design-time-name="8bbe0f5d-16dd-49a7-ace1-1d52c5bdff96">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="89aa49a5-b0e5-4c5d-a3af-6b6ce1b54578">
+              <TableID>dbo_Vanzari</TableID>
+              <ColumnID>Vanzari_Bon</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="86ada138-df4b-4f7e-9878-f0151f4d8766">
+          <ID>Vanzari Count</ID>
+          <Name>Vanzari Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="79d4c0d2-2064-40f8-a1fa-ef168e6fab67">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="7c0ed290-a1dd-4a62-949a-b7ddfdcfefbd">
+              <TableID>dbo_Vanzari</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6013aa5e-1319-4cce-962b-7b1b636e88a3">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d979b7bc-a979-47b2-be96-0cd5e716ee86">
+              <AttributeID>PK Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="73db474b-469d-4eee-bd27-1afba0c1969b">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1629ba1b-2d95-40e1-823d-8878c0ade2db">
+                    <TableID>dbo_Vanzari</TableID>
+                    <ColumnID>FK_Time</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="0e83638e-1f07-4e4d-a706-d5f714023df6">
+    <DataSourceViewID>Sistem Gestional Bon</DataSourceViewID>
+  </Source>
+</Cube>

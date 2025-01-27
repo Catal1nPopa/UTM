@@ -1,0 +1,42 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans, AgglomerativeClustering, DBSCAN
+from sklearn.mixture import GaussianMixture
+from sklearn.datasets import make_blobs
+
+# Generăm setul de date
+data = make_blobs(n_samples=200, n_features=2, centers=4, cluster_std=1.8, random_state=101)
+
+# Afișăm setul de date original
+plt.scatter(data[0][:, 0], data[0][:, 1], c=data[1], cmap='rainbow')
+plt.title("Set de Date Original")
+plt.show()
+
+# Implementăm și afișăm clusterizarea folosind k-Means
+kmeans = KMeans(n_clusters=4)
+kmeans.fit(data[0])
+plt.scatter(data[0][:, 0], data[0][:, 1], c=kmeans.labels_, cmap='rainbow')
+plt.title("K-Means Clustering")
+plt.show()
+
+# Implementăm și afișăm clusterizarea folosind Agglomerative Clustering
+agg = AgglomerativeClustering(n_clusters=4)
+agg_labels = agg.fit_predict(data[0])
+plt.scatter(data[0][:, 0], data[0][:, 1], c=agg_labels, cmap='rainbow')
+plt.title("Agglomerative Clustering")
+plt.show()
+
+# Implementăm și afișăm clusterizarea folosind DBSCAN
+dbscan = DBSCAN(eps=0.9, min_samples=5)
+dbscan_labels = dbscan.fit_predict(data[0])
+plt.scatter(data[0][:, 0], data[0][:, 1], c=dbscan_labels, cmap='rainbow')
+plt.title("DBSCAN Clustering")
+plt.show()
+
+# Implementăm și afișăm clusterizarea folosind EM (Expectation Maximization)
+gmm = GaussianMixture(n_components=4)
+gmm.fit(data[0])
+gmm_labels = gmm.predict(data[0])
+plt.scatter(data[0][:, 0], data[0][:, 1], c=gmm_labels, cmap='rainbow')
+plt.title("EM (Expectation Maximization) Clustering")
+plt.show()

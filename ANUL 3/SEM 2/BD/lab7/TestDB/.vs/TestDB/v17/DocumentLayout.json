@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UTM\\ANUL 3\\SEM 2\\BD\\lab7\\TestDB\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B990E2D5-DFB3-4A9E-980B-046771161836}|TestDB.dwproj|D:\\UTM\\ANUL 3\\SEM 2\\BD\\lab7\\TestDB\\TestDB.database||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B990E2D5-DFB3-4A9E-980B-046771161836}|TestDB.dwproj|solutionrelative:TestDB.database||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TestDB.database [Design]",
+              "DocumentMoniker": "D:\\UTM\\ANUL 3\\SEM 2\\BD\\lab7\\TestDB\\TestDB.database",
+              "RelativeDocumentMoniker": "TestDB.database",
+              "ToolTip": "D:\\UTM\\ANUL 3\\SEM 2\\BD\\lab7\\TestDB\\TestDB.database [Design]",
+              "RelativeToolTip": "TestDB.database [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-20T08:35:07.022Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

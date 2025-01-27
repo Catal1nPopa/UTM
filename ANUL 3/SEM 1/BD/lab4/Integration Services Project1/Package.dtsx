@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/25/2023 9:28:19 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CATALIN"
+  DTS:CreatorName="CATALIN\Catalin"
+  DTS:DTSID="{6D5C61B3-B632-4BB8-885C-DA5821C3B149}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5314.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionGUID="{0D7270A4-F86B-4C71-8648-CC79C61A623D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+</DTS:Executable>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Catalin"
+  DTS:DTSID="{176A0AB9-BE0A-45CE-8BB8-475BEA685A47}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=Catalin;Initial Catalog=universitatea;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Integration Services Project2-{176A0AB9-BE0A-45CE-8BB8-475BEA685A47}Catalin;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

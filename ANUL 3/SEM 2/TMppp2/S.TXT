@@ -1,0 +1,79 @@
+web -- damin busines
+
+busines - domain helper
+
+helpers - domain
+tema 2 : SOLID
+
+- SRP
+
+- OCP
+
+- LSP
+
+- ISP
+
+- DIP
+
+
+Principiile SOLID:
+S - Single Responsibility Principle (Principiul responsabilității unice):
+
+Fiecare clasă ar trebui să aibă o singură responsabilitate.
+În cadrul stratului de domeniu, fiecare clasă ar trebui să fie responsabilă pentru gestionarea unei singure entități de domeniu sau a unei aspecte specifice a afacerii.
+O - Open/Closed Principle (Principiul deschis/închis):
+
+Clasele trebuie să fie deschise pentru extensie, dar închise pentru modificare.
+Acest lucru poate fi realizat prin folosirea de interfețe și abstractizare pentru a defini comportamentele și entitățile de bază ale domeniului, permițând extinderea prin implementarea acestora.
+L - Liskov Substitution Principle (Principiul substituirii Liskov):
+
+Obiectele de tipul unei clase de bază trebuie să poată fi înlocuite cu obiecte ale unei subclase fără a afecta corectitudinea programului.
+În cadrul stratului de domeniu, acest lucru înseamnă că orice subtip de entitate de domeniu (de exemplu, o subclasă a unei clase de bază) trebuie să se comporte în mod corespunzător cu așteptările definite pentru acea entitate.
+I - Interface Segregation Principle (Principiul segregării interfețelor):
+
+Interfețele specifice pentru un client nu ar trebui să conțină metode pe care clientul nu le folosește.
+În cadrul stratului de domeniu, acest lucru poate fi realizat prin definirea de interfețe clare și corespunzătoare pentru fiecare aspect distinct al domeniului, astfel încât să nu existe nicio dependență nedorită între module.
+D - Dependency Inversion Principle (Principiul inversării dependențelor):
+
+Modulele de înalt nivel nu ar trebui să depindă de modulele de nivel inferior. Ambii ar trebui să depindă de abstracții.
+În cadrul stratului de domeniu, acest lucru poate fi realizat prin folosirea de interfețe și abstractizare pentru a inversa direcția dependențelor între diferitele componente ale domeniului.
+
+
+Design Patterns:
+Pattern-ul de Factory:
+
+Poate fi utilizat pentru a crea obiecte de tipuri diferite de entități de domeniu în funcție de anumite criterii (de exemplu, crearea unei instanțe de mașină pe baza tipului specificat).
+Pattern-ul de Repository:
+
+Poate fi utilizat pentru a abstractiza logica de stocare și recuperare a entităților de domeniu, oferind metode standardizate pentru a interacționa cu acestea.
+Pattern-ul de Specification:
+
+Poate fi utilizat pentru a defini criterii de interogare complexe pentru a selecta entități de domeniu specifice în funcție de anumite condiții.
+Pattern-ul de Observer:
+
+Poate fi utilizat pentru a implementa mecanisme de notificare și observare între diferitele componente ale domeniului, permițând reacții la evenimente specifice.
+Pattern-ul de Value Object:
+
+Poate fi utilizat pentru a reprezenta obiecte imutabile care au valori semantice și identitate bazată pe valoare, cum ar fi o adresă sau o valoare monetară.
+
+
+Domain:
+
+În acest strat se concentrează pe modelele de domeniu, care reprezintă entitățile și regulile de afaceri ale aplicației tale.
+Datele care sunt esențiale pentru reprezentarea și manipularea obiectelor de domeniu ar trebui să fie aici. Acestea ar putea include entități precum "Mașină", "Utilizator", "Tranzacție" etc.
+Nu ar trebui să existe logică de afaceri complexă sau detalii de implementare aici, ci doar structuri de date pure și simple.
+Business Logic:
+
+Acest strat este responsabil pentru logica de afaceri a aplicației tale.
+Aici, vei folosi modelele de domeniu definite în stratul anterior pentru a implementa regulile și procesele de afaceri.
+Datele sunt folosite în mod activ pentru a realiza operațiile specifice aplicației. Aceste operații ar putea include căutarea mașinilor disponibile, calcularea prețurilor de închiriere, gestionarea programărilor etc.
+Helper:
+
+Stratul de Helper sau utilități este destinat funcțiilor auxiliare și suportive care nu sunt direct legate de logica de afaceri, dar care facilitează operațiunile aplicației.
+Aici pot fi incluse funcții utilitare, funcții pentru manipularea datelor, validarea datelor, formatarea datelor etc.
+Datele utilizate aici sunt adesea temporare și de natură auxiliară, cum ar fi datele de intrare pentru funcții de utilitate sau datele de ieșire pentru afișare.
+WEB:
+
+Acesta este stratul care gestionează interacțiunea cu utilizatorul și comunicarea cu alte sisteme externe, dacă este cazul.
+Datele aici sunt cele preluate din stratul de logică de afaceri și sunt prezentate utilizatorului prin interfețele web sau servicii web.
+Poate include date de intrare de la utilizatori (de exemplu, căutări, formulare de închiriere) și date de ieșire pentru afișare utilizatorului (de exemplu, listă de mașini disponibile, detalii despre mașină etc.).

@@ -1,0 +1,58 @@
+--acest select va returna toate datele cu toate coloanele si randurile din tabela discipline
+select * from universitatea.univer.discipline;
+
+--acest select va returna datele din coloanele Id_Student si Adresa_Postala_Student din tabela studenti
+--prin where se specifica ca doar Id_Student >= ca 5 vor satisface conditia
+--la fel, prin order by are loc aranjarea descrescatoare in dependenta de id_student
+select a.Id_Student, a.Adresa_Postala_Student from universitatea.univer.studenti a
+where a.Id_Student >= 5
+order by a.Id_Student desc;
+
+--aceasta interogare va prelua datele din tabela stundeti_reusita
+--am folosit in pentru a specifica o lista de id_discipline care satisface conditia
+--la fel Nota a fost specificata sa fie intre 7 si 10, folosind operatorul BETWEEN
+--in final am folosit like pentru a specifica care tip de evaluare va satisface conditia
+select b.Id_Student, b.Id_Disciplina,b.Tip_Evaluare, b.Nota 
+from universitatea.univer.studenti_reusita b
+where b.Id_Disciplina in(110, 116, 120, 112,117)
+and b.Nota between 7 and 10
+and b.Tip_Evaluare like 'oral' ;
+
+--aceasta interogare va afisa randurile de date din tabela reusita studenti in care nota este nula
+select b.* 
+from universitatea.univer.studenti_reusita b
+where b.Nota is null;
+
+--aceasta interogare va afisa randurile de date din tabela reusita studenti in care nota nu este nula
+select b.* 
+from universitatea.univer.studenti_reusita b
+where b.Nota is not null;
+
+--aceasta interogare va afisa datele din tabela profesori unde id la profesor este egala cu 55
+select a.* from universitatea.univer.profesori a
+where a.Id_Profesor = 55;
+
+--aceasta interogare va afisa datele despre stundetii care au nota mai mare ca 7 si mai mica ca 10
+select b.* from universitatea.univer.studenti_reusita b
+where b.Nota > 7 and b.Nota < 10;
+
+--aceast select va afisa datele care au numarul de ore a disciplinei = cu 60 si discipline are in nume caracterele Sisteme
+select a.* from universitatea.univer.discipline a
+where a.Nr_ore_plan_disciplina = 60  and a.Disciplina like '%Sisteme%' ;
+
+--acest select va returna datele care au numarul de ore = cu 60 sau 76
+select a.* from universitatea.univer.discipline a
+where a.Nr_ore_plan_disciplina = 60  or a.Nr_ore_plan_disciplina = 76 ;
+
+--acest select va elimina din afisare numele stundetilor precum Catalin, Dan, Nikita
+select a.* from universitatea.univer.studenti a
+where a.Prenume_Student not in ('Catalin', 'Dan', 'Nikita');
+
+--va afisa primele 5 randuri cu date din tabela discipline
+select TOP(5) a.* from universitatea.univer.discipline a;
+
+--va returna primele 2 randuri si plus restul randurilor care au numarul de ore la fel ca la primele 2
+select TOP(2) WITH TIES a.* from universitatea.univer.discipline a
+order by a.Nr_ore_plan_disciplina asc;
+
+

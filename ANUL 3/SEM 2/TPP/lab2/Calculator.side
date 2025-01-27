@@ -1,0 +1,236 @@
+{
+  "id": "b3c61ef5-9cc3-4167-9999-ecd1f8c1f8fc",
+  "version": "2.0",
+  "name": "Calculator",
+  "url": "https://tall.life",
+  "tests": [{
+    "id": "97fa23db-b89c-4504-962c-d1e988dd12ce",
+    "name": "TI211-PopaCatalin",
+    "commands": [{
+      "id": "6a1fb149-f9f2-4fe6-bf2f-adb49f3da680",
+      "comment": "",
+      "command": "open",
+      "target": "/height-calculator-how-tall-will-i-be/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fad57341-d1fe-4cf9-a034-6ef290859208",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "275647b2-81ab-498d-b2ec-958e360c9954",
+      "comment": "",
+      "command": "click",
+      "target": "css=.entry-content > .CalculatorForm tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=.entry-content > .CalculatorForm tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//article[@id='post-2468']/section/form/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,' Imperial  Metric')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2dbee316-952f-40b6-97be-725eebb3258f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.entry-content > .CalculatorForm tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=.entry-content > .CalculatorForm tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//article[@id='post-2468']/section/form/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,' Imperial  Metric')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "316f8949-0b47-45d8-80f9-af1d1ade1917",
+      "comment": "",
+      "command": "click",
+      "target": "id=Metric",
+      "targets": [
+        ["id=Metric", "id"],
+        ["css=#Metric", "css:finder"],
+        ["xpath=//input[@id='Metric']", "xpath:attributes"],
+        ["xpath=//article[@id='post-2468']/section/form/table/tbody/tr[2]/td[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2bff910-5a2e-453b-898e-c6d452c3927a",
+      "comment": "",
+      "command": "click",
+      "target": "id=Height1",
+      "targets": [
+        ["id=Height1", "id"],
+        ["css=#Height1", "css:finder"],
+        ["xpath=//input[@id='Height1']", "xpath:attributes"],
+        ["xpath=//tr[@id='Height_tr']/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87f58152-8388-4870-a191-4c18eb6cf724",
+      "comment": "",
+      "command": "type",
+      "target": "id=Height1",
+      "targets": [
+        ["id=Height1", "id"],
+        ["css=#Height1", "css:finder"],
+        ["xpath=//input[@id='Height1']", "xpath:attributes"],
+        ["xpath=//tr[@id='Height_tr']/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "150"
+    }, {
+      "id": "f922cc0d-4ad5-4aeb-bc39-53e3bbc48361",
+      "comment": "",
+      "command": "click",
+      "target": "id=Weight1",
+      "targets": [
+        ["id=Weight1", "id"],
+        ["css=#Weight1", "css:finder"],
+        ["xpath=//input[@id='Weight1']", "xpath:attributes"],
+        ["xpath=//tr[@id='Weight_tr']/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1849dd79-30e9-4525-80ab-d9755d778616",
+      "comment": "",
+      "command": "type",
+      "target": "id=Weight1",
+      "targets": [
+        ["id=Weight1", "id"],
+        ["css=#Weight1", "css:finder"],
+        ["xpath=//input[@id='Weight1']", "xpath:attributes"],
+        ["xpath=//tr[@id='Weight_tr']/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": "90"
+    }, {
+      "id": "395378b3-1895-4a6d-b185-dc863435523a",
+      "comment": "",
+      "command": "click",
+      "target": "id=YearsSelect",
+      "targets": [
+        ["id=YearsSelect", "id"],
+        ["css=#YearsSelect", "css:finder"],
+        ["xpath=//select[@id='YearsSelect']", "xpath:attributes"],
+        ["xpath=//tr[@id='Age_tr']/td[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "321e4a72-fbdd-4bcb-83c9-bb829882cbc1",
+      "comment": "",
+      "command": "select",
+      "target": "id=YearsSelect",
+      "targets": [],
+      "value": "label=30s"
+    }, {
+      "id": "9e0324c9-8a77-44f0-af5d-819a72cd74ee",
+      "comment": "",
+      "command": "click",
+      "target": "id=Calculate",
+      "targets": [
+        ["id=Calculate", "id"],
+        ["css=#Calculate", "css:finder"],
+        ["xpath=//button[@id='Calculate']", "xpath:attributes"],
+        ["xpath=//article[@id='post-2468']/section/div[7]/button", "xpath:idRelative"],
+        ["xpath=//div[7]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Calculate')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7543c889-3902-4f81-96e0-1ad82be17b99",
+      "comment": "",
+      "command": "click",
+      "target": "id=PeopleShorterCount",
+      "targets": [
+        ["id=PeopleShorterCount", "id"],
+        ["css=#PeopleShorterCount", "css:finder"],
+        ["xpath=//input[@id='PeopleShorterCount']", "xpath:attributes"],
+        ["xpath=//form[@id='PredictedPercentiles']/table/tbody/tr[6]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//div[10]/form/table/tbody/tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb04ef76-844d-494c-aacf-cad74aaa0f2c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=PeopleShorterCount",
+      "targets": [
+        ["id=PeopleShorterCount", "id"],
+        ["css=#PeopleShorterCount", "css:finder"],
+        ["xpath=//input[@id='PeopleShorterCount']", "xpath:attributes"],
+        ["xpath=//form[@id='PredictedPercentiles']/table/tbody/tr[6]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//div[10]/form/table/tbody/tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc65ad00-6371-4459-810c-f9f02aa18352",
+      "comment": "",
+      "command": "click",
+      "target": "id=IdealWeightHawiAnswer",
+      "targets": [
+        ["id=IdealWeightHawiAnswer", "id"],
+        ["css=#IdealWeightHawiAnswer", "css:finder"],
+        ["xpath=//input[@id='IdealWeightHawiAnswer']", "xpath:attributes"],
+        ["xpath=//form[@id='PredictIdealWeight']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//form[3]/table/tbody/tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6f90ea8-6128-443d-b4d8-23722ece141c",
+      "comment": "",
+      "command": "click",
+      "target": "id=IdealWeightHawiAnswer",
+      "targets": [
+        ["id=IdealWeightHawiAnswer", "id"],
+        ["css=#IdealWeightHawiAnswer", "css:finder"],
+        ["xpath=//input[@id='IdealWeightHawiAnswer']", "xpath:attributes"],
+        ["xpath=//form[@id='PredictIdealWeight']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//form[3]/table/tbody/tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a27e1944-c53b-4f0c-888e-edd92fce4ef5",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=IdealWeightHawiAnswer",
+      "targets": [
+        ["id=IdealWeightHawiAnswer", "id"],
+        ["css=#IdealWeightHawiAnswer", "css:finder"],
+        ["xpath=//input[@id='IdealWeightHawiAnswer']", "xpath:attributes"],
+        ["xpath=//form[@id='PredictIdealWeight']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//form[3]/table/tbody/tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "832d494b-1771-436b-9093-0e99fefedde5",
+      "comment": "",
+      "command": "verifyValue",
+      "target": "id=IdealWeightHawiAnswer",
+      "targets": [
+        ["id=IdealWeightHawiAnswer", "id"],
+        ["css=#IdealWeightHawiAnswer", "css:finder"],
+        ["xpath=//input[@id='IdealWeightHawiAnswer']", "xpath:attributes"],
+        ["xpath=//form[@id='PredictIdealWeight']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//form[3]/table/tbody/tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "45.4 kg"
+    }]
+  }],
+  "suites": [{
+    "id": "f6e7df50-3ca5-4119-8e84-d9980d7986fd",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["97fa23db-b89c-4504-962c-d1e988dd12ce"]
+  }],
+  "urls": ["https://tall.life/"],
+  "plugins": []
+}

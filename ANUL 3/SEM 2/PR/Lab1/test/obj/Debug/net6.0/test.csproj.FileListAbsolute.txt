@@ -1,0 +1,14 @@
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\obj\Debug\net6.0\test.GeneratedMSBuildEditorConfig.editorconfig
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\obj\Debug\net6.0\test.AssemblyInfoInputs.cache
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\obj\Debug\net6.0\test.AssemblyInfo.cs
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\obj\Debug\net6.0\test.csproj.CoreCompileInputs.cache
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\bin\Debug\net6.0\test.exe
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\bin\Debug\net6.0\test.deps.json
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\bin\Debug\net6.0\test.runtimeconfig.json
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\bin\Debug\net6.0\test.dll
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\bin\Debug\net6.0\test.pdb
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\obj\Debug\net6.0\test.dll
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\obj\Debug\net6.0\refint\test.dll
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\obj\Debug\net6.0\test.pdb
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\obj\Debug\net6.0\test.genruntimeconfig.cache
+D:\UTM\ANUL 3\SEM 2\PR\Lab1\test\obj\Debug\net6.0\ref\test.dll

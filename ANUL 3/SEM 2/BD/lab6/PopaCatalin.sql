@@ -1,0 +1,236 @@
+--In aceasta interogare, am folosit functia GROUPING pentru a determina daca o valoare specifica este 
+--subtotal sau total. ROLLUP este folosit pentru a specifica coloanele dupa care sa se efectueze gruparea. 
+--Rezultatul va contine subtotaluri pentru fiecare magazin, subtotaluri pentru fiecare furnizor si un total
+--global pentru toate produsele.
+SELECT
+    CASE WHEN GROUPING(MagazinID) = 1 THEN 'TotalMagazine' ELSE ISNULL(CONVERT(VARCHAR(255), MagazinID), 'TotalFurnizori') END AS Magazin,
+    CASE WHEN GROUPING(FurnizorID) = 1 THEN 'TotalFurnizori' ELSE ISNULL(CONVERT(VARCHAR(255), FurnizorID), 'TotalGlobal') END AS Furnizor,
+    SUM(PretProdus) AS TotalPretProduse
+FROM
+    Produse
+GROUP BY
+    ROLLUP (MagazinID, FurnizorID);
+
+
+--Operatorul CUBE este similar cu operatorul ROLLUP, dar genereaza toate combinatiile posibile ale gruparilor specifice, 
+--inclusiv subtotalurile si totalurile pentru fiecare combinatie. Acesta ofera o analiza multidimensionala mai detaliata a datelor.
+SELECT
+    CASE 
+        WHEN GROUPING(MagazinID) = 1 THEN 'TotalMagazine' 
+        ELSE ISNULL(CONVERT(VARCHAR(255), MagazinID), 'TotalFurnizori') 
+    END AS Magazin,
+    CASE 
+        WHEN GROUPING(FurnizorID) = 1 THEN 'TotalFurnizori' 
+        ELSE ISNULL(CONVERT(VARCHAR(255), FurnizorID), 'TotalGlobal') 
+    END AS Furnizor,
+    SUM(PretProdus) AS TotalPretProduse
+FROM
+    Produse
+GROUP BY
+    CUBE (MagazinID, FurnizorID);
+
+
+--Rezultatul interogarii va contine totaluri separate pentru fiecare set de grupuri specificat in clauza GROUPING SETS,
+--permitandu-ne sa obtinem o analiza mai detaliata a datelor din diferite perspective.
+SELECT
+    FunctieID,
+    AnulNasterii,
+    COUNT(*) AS NumarAngajati
+FROM
+    Angajati
+GROUP BY
+    GROUPING SETS ((FunctieID), (AnulNasterii), ());
+
+
+--Aceasta interogare va atribui un clasament fiecarui bon in functie de suma totala, ordonata descrescator. Clasamentul va
+--fi asignat bonurilor in functie de cat de mare este suma totala a acestora. Rezultatul interogarii va include informatiile despre bon 
+--(BonID, CumparatorID, AngajatID, SumaTotala) si clasamentul fiecarui bon in raport cu suma totala.
+SELECT
+    BonID,
+    CumparatorID,
+    AngajatID,
+    SumaTotala,
+    RANK() OVER (ORDER BY SumaTotala DESC) AS Clasament
+FROM
+    Bon;
+
+
+--Aceasta interogare va atribui un clasament distinct fiecarui produs in functie de pretul sau, ordonat descrescator. Clasamentul va fi
+--asignat produselor in functie de cat de mare este pretul lor, fara sa omita clasamente intre produsele care au acelasi pret. Rezultatul
+--interogarii va include informatiile despre fiecare produs si clasamentul sau in functie de pret.
+SELECT
+    ProdusID,
+    NumeProdus,
+    MagazinID,
+    PretProdus,
+    DENSE_RANK() OVER (ORDER BY PretProdus DESC) AS ClasamentPret
+FROM
+    Produse;
+
+--Aceasta interogare va atribui fiecarui produs un numar de quartil (1, 2, 3 sau 4) in functie de pretul sau. Grupurile 
+--sunt create astfel incat sa aiba numarul egal de produse in fiecare grup, iar produsele sunt clasificate in interiorul fiecarui quartil in 
+--functie de pret. De exemplu, produsele cu pretul cel mai mic vor fi in quartilul 1, iar cele cu pretul cel mai mare vor fi in quartilul 4.
+SELECT
+    ProdusID,
+    NumeProdus,
+    MagazinID,
+    PretProdus,
+    NTILE(4) OVER (ORDER BY PretProdus) AS Quartil
+FROM
+    Produse;
+
+
+--Aceasta interogare va atribui un numar secvential unic fiecarui produs in functie de pretul sau, ordonat descrescator. 
+--Fiecare produs va primi un numar secvential unic, incepand de la 1 pentru cel mai scump produs si continuand in ordinea descrescatoare a pretului.
+SELECT
+    ROW_NUMBER() OVER (ORDER BY PretProdus DESC) AS NumarSecvential,
+    ProdusID,
+    NumeProdus,
+    MagazinID,
+    PretProdus,
+    FurnizorID
+FROM
+    Produse;
+
+--In aceasta interogare, functia AVG() este folosita pentru a calcula media pretului fiecarui produs in fiecare magazin. Apoi, rezultatul este pivotat 
+--pentru a afisa pretul mediu pentru fiecare magazin sub forma de coloane separate.
+SELECT *
+FROM (
+    SELECT NumeProdus, PretProdus, MagazinID
+    FROM Produse
+) AS SourceTable
+PIVOT (
+    AVG(PretProdus)
+    FOR MagazinID IN ([1], [2], [3], [4])
+) AS PivotTable;
+
+
+--Astfel, operatorul UNPIVOT transforma datele din coloanele "DataProducere" si "DataExpirare" 
+--in randuri separate pentru fiecare produs si tip de data, permitand o analiza mai usoara a datelor.
+SELECT ProdusID, TipData, Data
+FROM (
+    SELECT ProdusID, DataProducere, DataExpirare
+    FROM Valabilitate
+) AS SourceTable
+UNPIVOT (
+    Data FOR TipData IN (DataProducere, DataExpirare)
+) AS UnpivotTable;
+
+
+--am crat o interogare in care am folosit o tabela derivata   SumaTotala pentru a calcula suma medie totala
+WITH SumaTotala AS (
+    SELECT SumaTotala
+    FROM Bon
+)
+SELECT AVG(SumaTotala) AS SumaMedie
+FROM SumaTotala;
+
+--interogare nerecursiva
+--Aceasta interogare calculeaza pretul mediu al fiecarui produs in fiecare magazin folosind o CTE nerecursiva
+--si apoi se alatura tabelului "Produse" pentru a adauga pretul mediu calculat pentru fiecare inregistrare.
+WITH PretMediuProduse AS (
+    SELECT MagazinID, AVG(PretProdus) AS PretMediu
+    FROM SistemGestionalBon.dbo.Produse
+    GROUP BY MagazinID
+)
+SELECT p.ProdusID, p.NumeProdus, p.MagazinID, p.PretProdus, p.FurnizorID, pm.PretMediu
+FROM SistemGestionalBon.dbo.Produse p
+JOIN PretMediuProduse pm ON p.MagazinID = pm.MagazinID;
+
+--interogare nerecursiva cu vederi
+--Aceasta vedere va calcula pretul mediu al fiecarui produs in fiecare magazin si va afisa rezultatul 
+--intr-o vedere numita "ProduseCuPretMediuMagazin"
+CREATE VIEW ProduseCuPretMediuMagazin2 AS
+SELECT 
+    MagazinID,
+    AVG(PretProdus) AS PretMediu
+FROM 
+    SistemGestionalBon.dbo.Produse
+GROUP BY 
+    MagazinID;
+
+SELECT * FROM ProduseCuPretMediuMagazin2;
+
+
+--nerecursiva cu tabele derivate
+--In aceasta interogare, "SELECT MagazinID, PretProdus FROM Produse" reprezinta tabela derivata. Aceasta este utilizata pentru a obtine 
+--o lista de MagazinID-uri si preturile produselor asociate. Apoi, in exteriorul acestei subinterogari, calculam suma totala a preturilor
+--produselor pentru fiecare magazin, folosind clauza GROUP BY.
+SELECT 
+    MagazinID,
+    SUM(PretProdus) AS SumaTotala
+FROM 
+    (SELECT MagazinID, PretProdus FROM SistemGestionalBon.dbo.Produse) AS TabelaDerivata
+GROUP BY 
+    MagazinID;
+
+--Aceasta interogare utilizeaza o CTE recursiva pentru a genera o secventa de numere intregi de la 1 
+--la 10, adaugand 1 la fiecare iteratie pana cand se atinge limita de 10.
+WITH NumereIntregi AS (
+    SELECT 1 AS Numar
+    UNION ALL
+    SELECT Numar + 1
+    FROM NumereIntregi
+    WHERE Numar < 10
+)
+SELECT * FROM NumereIntregi;
+
+
+--interogare CTE nerecursiva
+--In acest exemplu, am definit o CTE numita "DateDiferenta" care calculeaza diferenta in zile intre data de productie si data de expirare pentru fiecare produs 
+--folosind functia DATEDIFF(). Apoi, interogam acea CTE pentru a selecta ProdusID-ul si diferenta in zile calculata pentru fiecare produs.
+WITH DateDiferenta AS (
+    SELECT 
+        ProdusID,
+        DATEDIFF(day, DataProducere, DataExpirare) AS DiferentaZile
+    FROM 
+        SistemGestionalBon.dbo.Valabilitate
+)
+SELECT 
+    ProdusID,
+    DiferentaZile
+FROM 
+    DateDiferenta;
+
+
+
+--expresie-tabel generalizata cu functie analitica
+--CTE-ul "SumaCumulativa" calculeaza suma cumulativa a preturilor produselor in ordinea datelor de vanzare 
+--folosind functia analitica SUM() cu clauza OVER. Apoi, interogam acea CTE pentru a selecta toate coloanele
+--din CTE, inclusiv suma cumulativa calculata.
+WITH SumaCumulativa AS (
+    SELECT 
+        ProdusID,
+        NumeProdus,
+        PretProdus,
+        SUM(PretProdus) OVER (ORDER BY ProdusID) AS SumaCumulativa
+    FROM 
+        SistemGestionalBon.dbo.Produse
+)
+SELECT 
+    ProdusID,
+    NumeProdus,
+    PretProdus,
+    SumaCumulativa
+FROM 
+    SumaCumulativa;
+--In acest exemplu, CTE-ul recursiv, "RecursivCTE", incepe cu un produs specificat prin ProdusID si continua
+--apoi sa selecteze produsul urmator in secventa, adaugand unu la ProdusID. Acest proces se repeta pana cand 
+--se atinge o anumita conditie de oprire (in acest caz, limitam numarul de produse afisate la 100 pentru a 
+--evita buclele infinite).
+--Elemente ale CTE recursive
+WITH RecursivCTE AS (
+    -- Membru de ancorare
+    SELECT ProdusID, NumeProdus, MagazinID, PretProdus, FurnizorID
+    FROM [SistemGestionalBon].[dbo].[Produse]
+    WHERE ProdusID = 1 -- Pornim de la un anumit ProdusID
+
+    UNION ALL
+
+    -- Membru recursiv
+    SELECT p.ProdusID, p.NumeProdus, p.MagazinID, p.PretProdus, p.FurnizorID
+    FROM [SistemGestionalBon].[dbo].[Produse] p
+    INNER JOIN RecursivCTE c ON p.ProdusID = c.ProdusID + 1 -- Selectam produsul urmator in secventa
+    WHERE p.ProdusID <= 100 -- Limitam recursivitatea pentru a evita bucle infinite
+)
+SELECT * FROM RecursivCTE;
